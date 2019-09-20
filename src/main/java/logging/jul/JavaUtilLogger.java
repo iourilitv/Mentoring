@@ -1,7 +1,9 @@
 package logging.jul;
 
 import java.io.IOException;
+import java.util.logging.Filter;
 import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 /**
@@ -69,5 +71,16 @@ public class JavaUtilLogger {
 
         logger.log(Level.OFF, "OFF Level: " + Level.OFF.intValue());
         //OFF: OFF Level: 2147483647 [Пт сен 20 12:13:15 MSK 2019]
+
+        //После применения MyFileFilter в файл выведется
+        //FINE: FINE Level: 500 [Пт сен 20 13:20:16 MSK 2019]
+
+        //После применения MyConsoleFilter в console выведется
+        //D:\GeekBrains\_Mentoring\Mentoring\src\main\java\logging\jul\logTest.properties
+        //***Levels list***
+        //WARNING: WARNING Level: 900 [Пт сен 20 13:43:21 MSK 2019]
+
     }
+
+
 }
