@@ -1,8 +1,7 @@
-package logging;
+package logging.jul;
 
 import java.io.IOException;
 import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 /**
@@ -19,12 +18,12 @@ public class JavaUtilLogger {
         //TODO без него тоже выводится наш конфигуратор
         // достаточно к конфигурации прописать путь к своему конфигуратору в VM option
         //Например:
-        //-Djava.util.logging.config.file=D:\GeekBrains\_Mentoring\Mentoring\src\main\java\logging\logTest.properties
+        //-Djava.util.logging.config.file=D:\GeekBrains\_Mentoring\Mentoring\src\main\java\logging\jul\logTest.properties
 
         //выводим путь и название конфигурационного файла для логирования проекта
         System.out.println(System.getProperty("java.util.logging.config.file"));
         //result
-        //D:\GeekBrains\_Mentoring\Mentoring\src\main\java\logging\logTest.properties
+        //D:\GeekBrains\_Mentoring\Mentoring\src\main\java\logging\jul\logTest.properties
 
         //отключаем хандлер по умолчанию, чтобы не выводить в консоль!
         //logger.setUseParentHandlers(false);

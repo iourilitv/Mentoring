@@ -1,8 +1,7 @@
-package logging;
+package logging.jul;
 
 import java.io.IOException;
 import java.util.logging.*;
-import java.util.regex.Pattern;
 
 /**
  * Логгирование с помощью встроенного java логера.
