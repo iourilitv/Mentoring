@@ -1,7 +1,8 @@
-package logging.log4j;
+package logging.log4j2;
 
-//import org.apache.log4j.Logger;
-import org.apache.log4j.Logger;
+import logging.log4j.Reader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URI;
@@ -10,10 +11,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * The old version of log4j. See log4j dependency in pom.xml
+ * The next version of log4j. See log4j2 dependency in pom.xml
  */
-public class FileReader implements Reader{
-    final static Logger logger = Logger.getLogger(FileReader.class);
+public class FileReader2 implements Reader{
+    final static Logger logger = LogManager.getLogger(FileReader2.class);
 
     @Override
     public String read() {
