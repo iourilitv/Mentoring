@@ -1,10 +1,7 @@
 package logging.jul;
 
 import java.io.IOException;
-import java.util.logging.Filter;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 /**
  * Логгирование с помощью встроенного java логера.
@@ -15,12 +12,16 @@ public class JavaUtilLogger {
     private static final Logger logger = Logger.getLogger(JavaUtilLogger.class.getName());
 
     public static void main(String[] args) throws IOException {
-        //применить конфиуграционный файл
+
+        //применить конфигурационный файл
         //LogManager.getLogManager().readConfiguration();
         //TODO без него тоже выводится наш конфигуратор
         // достаточно к конфигурации прописать путь к своему конфигуратору в VM option
         //Например:
         //-Djava.util.logging.config.file=D:\GeekBrains\_Mentoring\Mentoring\src\main\java\logging\jul\logTest.properties
+        //TODO а это не работает. Не находит файл. Где он должен лежать?
+        //LogManager.getLogManager().readConfiguration(JavaUtilLogger.class.getResourceAsStream("logTest.properties"));
+        //System.out.println(JavaUtilLogger.class.getResourceAsStream("logTest.properties"));//null
 
         //выводим путь и название конфигурационного файла для логирования проекта
         System.out.println(System.getProperty("java.util.logging.config.file"));
