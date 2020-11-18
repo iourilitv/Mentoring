@@ -26,7 +26,7 @@
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
+            <version>1.2.27</version>
         </dependency>
 
         <!-- log4j2 http://logging.apache.org/log4j/2.0/maven-artifacts.html#Using_Log4j_in_your_Apache_Maven_build -->
